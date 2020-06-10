@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pythongit.iml" filepath="$PROJECT_DIR$/.idea/pythongit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Pythonbasics.iml" filepath="$PROJECT_DIR$/.idea/Pythonbasics.iml" />
     </modules>
   </component>
 </project>
