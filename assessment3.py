@@ -115,15 +115,31 @@ def summer_69(arr):
     sum = 0
     for val in arr:
         if val in [6,7,8,9]:
-        #if val == 6 or val == 7 or val == 8 or val == 9:
             continue
         sum += val
     return sum
 
 
 print(summer_69([1, 3, 5]), summer_69([4, 5, 6, 7, 8, 9]), summer_69([2, 1, 6, 9, 11]))
-
-
+'''
+def summer_69(arr):
+    total = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return total
+'''
 #######################################
 # CHALLENGING PROBLEMS
 # SPY GAME
