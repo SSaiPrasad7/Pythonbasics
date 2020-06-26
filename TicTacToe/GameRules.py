@@ -1,4 +1,4 @@
-from TicTacToe.Screen import *
+from Pythonbasics.TicTacToe.Screen import board
 
 
 class GameRules:

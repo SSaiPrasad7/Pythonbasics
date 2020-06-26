@@ -1,9 +1,9 @@
 import sys
 
-from TicTacToe.GameRules import GameRules
-from TicTacToe.Screen import Screen, board
-from TicTacToe.UserDetails import UserDetails
-from TicTacToe.UserPosition import UserPosition
+from Pythonbasics.TicTacToe.GameRules import GameRules
+from Pythonbasics.TicTacToe.Screen import board, Screen
+from Pythonbasics.TicTacToe.UserDetails import UserDetails
+from Pythonbasics.TicTacToe.UserPosition import UserPosition
 
 while 1:
     print("Do you want to play the game??")
