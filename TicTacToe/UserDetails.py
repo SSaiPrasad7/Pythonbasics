@@ -22,7 +22,7 @@ class UserDetails:
         self.playerIcons(player2, players_list, icons)
         return players_list
 
-    def playerIcons(self, player, players_list, icons):
+    def playerIcons(self, player, players_list,icons):
         print(icons)
         in_range = False
         while in_range == False:

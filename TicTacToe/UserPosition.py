@@ -19,7 +19,7 @@ class UserPosition:
         players = list(players_list.keys())
         player_icons = list(players_list.values())
         print(f'{players[0]}')
-        player1_position = UserPosition().getPostion(player_icons)
+        player1_position = self.getPostion(player_icons)
         board[player1_position] = player_icons[0]
         Screen().outputDislay()
         return players[0]
@@ -28,7 +28,7 @@ class UserPosition:
         players = list(players_list.keys())
         player_icons = list(players_list.values())
         print(f'{players[1]}')
-        player2_position = UserPosition().getPostion(player_icons)
+        player2_position = self.getPostion(player_icons)
         board[player2_position] = player_icons[1]
         Screen().outputDislay()
         return players[1]
