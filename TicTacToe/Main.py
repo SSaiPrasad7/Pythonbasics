@@ -8,7 +8,7 @@ from Pythonbasics.TicTacToe.Screen import board, Screen
 from Pythonbasics.TicTacToe.UserDetails import UserDetails
 from Pythonbasics.TicTacToe.UserPosition import UserPosition
 
-#  This is a main which has all the Game play functionality.
+#  This is  main which has all the Game play functionality.
 if __name__ == "__main__":
     while 1:
         # Now we will ask if player wants to start the game or not
