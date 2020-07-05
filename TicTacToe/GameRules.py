@@ -2,7 +2,10 @@ from Pythonbasics.TicTacToe.Screen import board
 
 
 class GameRules:
-    def winCondition(self, player, players_list):
+    def gameConditions(self, player, players_list):
+        '''
+         Evaluates whether there is a winner or a tie
+        '''
         if self.checkRows() or self.checkColumns() or self.checkDiagonals():
             print(f"Congratulations!!{player} won the game.")
             board.clear()
@@ -15,16 +18,25 @@ class GameRules:
             return False
 
     def checkRows(self):
+        '''
+         Checks whether the player has three of their marks in a horizontal row
+        '''
         for i in range(1, 8, 3):
             if board[i] == board[i + 1] == board[i + 2]:
                 return True
 
     def checkColumns(self):
+        '''
+         Checks whether the player has three of their marks in a vertical row
+        '''
         for i in range(1, 4, 1):
             if board[i] == board[i + 3] == board[i + 6]:
                 return True
 
     def checkDiagonals(self):
+        '''
+         Checks whether the player has three of their marks in a diagonal row
+        '''
         for i in range(1, 2):
             if board[i] == board[i + 4] == board[i + 8]:
                 return True
@@ -33,6 +45,9 @@ class GameRules:
                 return True
 
     def tieCondition(self, players_list):
+        '''
+         Checks whether there is a tie
+        '''
         player_icons = list(players_list.values())
         if board.count(player_icons[0]) == 5 and board.count(player_icons[1]) == 4:
             return True
