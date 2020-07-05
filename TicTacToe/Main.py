@@ -7,14 +7,17 @@ from Pythonbasics.TicTacToe.GameRules import GameRules
 from Pythonbasics.TicTacToe.Screen import board, Screen
 from Pythonbasics.TicTacToe.UserDetails import UserDetails
 from Pythonbasics.TicTacToe.UserPosition import UserPosition
-
+from Pythonbasics.TicTacToe.Helper import Helper
+from json
 #  This is  main which has all the Game play functionality.
+#Read the config.json in to say config attribute
 if __name__ == "__main__":
+    config = Helper().readConfig("config.json")
     while 1:
         # Now we will ask if player wants to start the game or not
-        print("Do you want to play the game??")
+        print(config["messages"]["wantToPlay"])
         option_yn = UserDetails().wantToPlay()
-        if option_yn == "Y":
+        if option_yn == config.gameCtrls.acceptPlay:
             print("Welcome to Tic Tac Toe Game")
             players_list = UserDetails().playerDetails()
             print("Players list with icons respectively:", players_list)

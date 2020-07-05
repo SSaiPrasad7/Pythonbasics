@@ -1,0 +1,8 @@
+{
+    "messages": {
+        "wantToPlay": "Do you want to play the game??",
+    },
+    "gameCtrls":{
+        "acceptPlay": "Y"
+    }
+}
