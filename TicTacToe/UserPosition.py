@@ -29,7 +29,7 @@ class UserPosition:
 
         player1_position = self.getPostion(players[0], players_icons)
         board[player1_position] = players_icons[0]
-        Screen().outputDislay()
+        Screen().outputDisplay()
         return players[0]
 
     def set_position_2(self, players_list):
@@ -43,5 +43,5 @@ class UserPosition:
 
         player2_position = self.getPostion(players[1], players_icons)
         board[player2_position] = players_icons[1]
-        Screen().outputDislay()
+        Screen().outputDisplay()
         return players[1]

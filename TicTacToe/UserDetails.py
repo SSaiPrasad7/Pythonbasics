@@ -3,6 +3,7 @@ class UserDetails:
         '''
          To check whether the user wants to play the game or not
         '''
+        print("Do you want to play??")
         while True:
             choice = input("Enter Y for Yes or N for No ")
             try:
@@ -19,12 +20,14 @@ class UserDetails:
         '''
         To get the information about the players and players icons respectively
         '''
+        print("Welcome to Tic Tac Toe Game")
         icons = ['!', '@', '#', '$', '%', '^', '&', '*', 'X', 'O']
         players_list = {}
         player1 = input("Enter the Player1 name: ")
         player2 = input("Enter the Player2 name: ")
         icons = self.playerIcons(player1, players_list, icons)
         self.playerIcons(player2, players_list, icons)
+        print("Players list with icons respectively:", players_list)
         return players_list
 
     def playerIcons(self, player, players_list, icons):
