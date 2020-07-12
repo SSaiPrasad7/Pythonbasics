@@ -3,32 +3,26 @@
 '''
 
 from Pythonbasics.TicTacToe.GameRules import GameRules
-from Pythonbasics.TicTacToe.Screen import Screen
+from Pythonbasics.TicTacToe.Screen import Screen, config
 from Pythonbasics.TicTacToe.UserDetails import UserDetails
 from Pythonbasics.TicTacToe.UserPosition import UserPosition
 
 
-# from Pythonbasics.TicTacToe.Helper import Helper
-# import json
-
-
-#  This is  main which has all the Game play functionality.
-# Read the config.json in to say config attribute
-# config = Helper().readConfig("config.json")
-# Now we will ask if player wants to start the game or not
-# config["messages"]["wantToPlay"]
-
 class Main:
-
-    def startGame(self,option):
-        if option == "Y":  # config.gameCtrls.acceptPlay:
+    def play(self):
+        # Now we will ask if player wants to start the game or not
+        option_yn = UserDetails().wantToPlay()
+        if Main().startGame(option_yn) == True:
+            Main().play()
+    def startGame(self, option):
+        if option == config["gameControls"]["acceptPlay"]:
             players_list = UserDetails().playerDetails()
             Screen().boardIntialize()
             Screen().outputDisplay()
-            game_output=Main().gamePlay(players_list)
+            game_output = Main().gamePlay(players_list)
             return game_output
         else:
-            print('Thank you for playing!!!')
+            print(config["endGame"]["message"])
             return False
 
     def gamePlay(self, players_list):
@@ -45,8 +39,6 @@ class Main:
                 return player2_won
 
 
+#  This is  main which has all the Game play functionality.
 if __name__ == "__main__":
-    option_yn = UserDetails().wantToPlay()
-    if Main().startGame(option_yn) == True:
-        option_yn = UserDetails().wantToPlay()
-        Main().startGame(option_yn)
+    Main().play()

@@ -1,6 +1,7 @@
 import json
 
 class Helper:
-    def readConfig(fileName):
-        with open(fileName) as f:
-            return json.loads(f)
+    def readConfig(self,filename):
+        with open(filename) as f:
+            data=json.load(f)
+            return data

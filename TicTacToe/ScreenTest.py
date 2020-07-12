@@ -1,6 +1,6 @@
 import unittest
 
-from Pythonbasics.TicTacToe.Screen import Screen, board
+from Pythonbasics.TicTacToe.Screen import board,Screen
 
 
 class ScreenTest(unittest.TestCase):

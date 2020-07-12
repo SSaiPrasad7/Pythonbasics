@@ -3,7 +3,6 @@ from Pythonbasics.TicTacToe.Main import Main
 from Pythonbasics.TicTacToe.Screen import Screen
 from Pythonbasics.TicTacToe.UserDetails import UserDetails
 
-
 class MainTest(unittest.TestCase):
     def test_start_game(self):
         test_option=Main().startGame('N')

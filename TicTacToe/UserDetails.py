@@ -1,16 +1,19 @@
+from Pythonbasics.TicTacToe.Screen import config
+
+
 class UserDetails:
     def wantToPlay(self):
         '''
          To check whether the user wants to play the game or not
         '''
-        print("Do you want to play??")
+        print(config["messages"]["wantToPlay"])
         while True:
-            choice = input("Enter Y for Yes or N for No ")
+            choice = input(config["userChoice"]["yesOrNo"])
             try:
-                if choice not in ["Y", "N"]:
+                if choice not in [config["gameControls"]["acceptPlay"], config["gameControls"]["rejectPlay"]]:
                     raise ValueError
             except ValueError:
-                print("Sorry, but you did not choose Y or N option")
+                print(config["userChoice"]["notFound"])
                 continue
             else:
                 break
@@ -20,14 +23,17 @@ class UserDetails:
         '''
         To get the information about the players and players icons respectively
         '''
-        print("Welcome to Tic Tac Toe Game")
-        icons = ['!', '@', '#', '$', '%', '^', '&', '*', 'X', 'O']
+        print(config["welcome"]["start"])
+        original_icons = config["players"]["icons"]
+        icons=[]
+        icons.extend(original_icons)
         players_list = {}
-        player1 = input("Enter the Player1 name: ")
-        player2 = input("Enter the Player2 name: ")
+        player1 = input(config["players"]["player1"])
+        player2 = input(config["players"]["player2"])
         icons = self.playerIcons(player1, players_list, icons)
         self.playerIcons(player2, players_list, icons)
-        print("Players list with icons respectively:", players_list)
+        print(config["players"]["list"], players_list)
+        icons.clear()
         return players_list
 
     def playerIcons(self, player, players_list, icons):
@@ -37,11 +43,11 @@ class UserDetails:
         print(icons)
         while True:
             try:
-                player_icon = input(f'{player.capitalize()} select one icon from the above set: ')
+                player_icon = input(f"{player.capitalize()}" + config["userIcon"]["select"])
                 if player_icon not in icons:
                     raise ValueError
             except:
-                print("Choose the icon from the above set only")
+                print(config["userIcon"]["notFound"])
                 continue
             else:
                 players_list[player] = player_icon

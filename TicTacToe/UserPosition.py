@@ -1,4 +1,4 @@
-from Pythonbasics.TicTacToe.Screen import board, Screen
+from Pythonbasics.TicTacToe.Screen import board, Screen, config
 
 
 class UserPosition:
@@ -7,12 +7,12 @@ class UserPosition:
          Getting the position from the user and validating the position
         '''
         while True:
-            position = input(f"{player.capitalize()} enter the position between 1 to 9: ")
+            position = input(f"{player.capitalize()}" + config["userPosition"]["select"])
             try:
                 if position.isdigit() == False or position in player_icons or position not in board:
                     raise ValueError
             except ValueError:
-                print("Sorry, but you did not choose a value between 1 and 9 or Position may be filled.Try again")
+                print(config["userPosition"]["notFound"])
                 continue
             else:
                 break

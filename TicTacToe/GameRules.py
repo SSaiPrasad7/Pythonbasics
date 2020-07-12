@@ -1,4 +1,4 @@
-from Pythonbasics.TicTacToe.Screen import board
+from Pythonbasics.TicTacToe.Screen import board, config
 
 
 class GameRules:
@@ -7,11 +7,11 @@ class GameRules:
          Evaluates whether there is a winner or a tie
         '''
         if self.checkRows() or self.checkColumns() or self.checkDiagonals():
-            print(f"Congratulations!!{player} won the game.")
+            print(f"{player} " + config["game"]["won"])
             board.clear()
             return True
         elif self.tieCondition(players_list):
-            print("Game tied")
+            print(config["game"]["tie"])
             board.clear()
             return True
         else:
