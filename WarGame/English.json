@@ -1,0 +1,48 @@
+{
+    "messages":
+    {
+        "wantToPlay": "Do you want to play the game??"
+    },
+    "gameControls":
+    {
+        "acceptPlay": "Y",
+        "rejectPlay": "N"
+    },
+    "userChoice":
+    {
+        "yesOrNo": "Enter Y for Yes or N for No ",
+        "notFound":"Sorry, but you did not choose Y or N option"
+    },
+    "welcome":
+    {
+        "start":"\t\t\t\tWelcome to the card game 'WAR'!\n"
+    },
+    "players":
+    {
+        "player1": "Enter the Player1 name: ",
+        "player2": "Enter the Player2 name: "
+
+    },
+    "war":
+    {
+        "gameOver": " unable to play war! Game Over at War",
+        "won":" Wins! ",
+        "lose":" Loses!"
+    },
+    "game":
+    {
+        "outOfGame": "out of cards! Game Over",
+        "won":"won the game.Congratulations!!!"
+    },
+    "board":
+    {
+        "display":"\t\t\t\tGame Board",
+        "line": "-------------------------------------------"
+    },
+    "endGame":
+    {
+        "message": "Thank you for playing!!!"
+    }
+
+
+}
