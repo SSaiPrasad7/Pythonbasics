@@ -1,4 +1,4 @@
-from WarGame.Stats import config
+from Pythonbasics.WarGame.Stats import config
 
 
 class Check():

@@ -1,6 +1,6 @@
 import random
 
-from WarGame.Card import ranks, suits, Card
+from Pythonbasics.WarGame.Card import ranks, suits, Card
 
 
 class Deck:
