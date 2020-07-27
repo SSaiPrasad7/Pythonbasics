@@ -1,7 +1,7 @@
 from Pythonbasics.TicTacToe.Helper import Helper
 
 # Read the English.json in to say config attribute
-config = Helper().readConfig("config.json")
+config = Helper().readConfig("config1.json")
 
 board = []
 
