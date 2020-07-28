@@ -25,7 +25,7 @@ def client_setup():
         server_ip = "127.0.0.2"
     connection_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        connection_socket.connect((server_ip, 2020))
+        connection_socket.connect((("%s" % server_ip), 2020))
         print("Connected to server")
         message_func(connection_socket, "Connected to server")
         connection_socket.close()
@@ -72,12 +72,12 @@ def get_text(connection_socket):
 if __name__ == "__main__":
     print("1.Server \n2.Client \n3.Quit")
     choice = input("Select 1 or 2 option from the above:")
-    while True and choice!=3:
+    while True and choice != 3:
         if choice == "1":
             server_setup()
         elif choice == "2":
             client_setup()
-        elif choice=="3":
+        elif choice == "3":
             print("QUIT")
             break
         else:
