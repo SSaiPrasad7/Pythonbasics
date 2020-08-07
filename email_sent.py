@@ -20,4 +20,3 @@ with smtplib.SMTP(smtp_server, port) as server:
         server.sendmail(sender_email, receiver_email, message)
         print("sent")
 
-#cndtnnrynyrvteea
